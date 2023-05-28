@@ -57,10 +57,9 @@ export const Timer = ({ focusSubject, clearSubject, onTimerEnd }) => {
         <Timing onChangeTime={setMinutes} />
       </View>
       <View style={styles.bottonWrapper}>
-        {!isStarted && (
+        {!isStarted ? (
           <RoundedButton title="start" onPress={() => setIsStarted(true)} />
-        )}
-        {isStarted && (
+        ) : (
           <RoundedButton title="pause" onPress={() => setIsStarted(false)} />
         )}
       </View>
